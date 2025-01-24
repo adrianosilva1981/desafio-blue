@@ -2,9 +2,14 @@
 
 namespace App\Controllers;
 
-class ClientsController
+class ClientsController extends Controller
 {
-    function __construct() {}
+    private const METHODS = ['GET'];
+
+    function __construct($request, $headers) {
+        parent::__construct($request, $headers);
+        $this->isMethosdAllowed(self::METHODS);
+    }
 
     public function getClients() {
         return ['message' => 'clients works!'];

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+    <style>
+        .container {
+            font-family: sans-serif;
+            text-align: center;
+            color: #474a8a;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body ng-app="app">
+    <div class="container" ng-controller="clientController" ng-init="getClients()">
+        <h1>Hello world!!</h1>
+
+        <p>This is {{ moduleName }}</p>
+    </div>
+</body>
+
+<script src="assets/js/angular.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+</html>

@@ -34,7 +34,7 @@ class DatabaseConnectionService
         }
     }
 
-    public function getConnection() {
+    public function getConnection(): PDO {
         return $this->connection;
     }
 }

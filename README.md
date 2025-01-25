@@ -24,6 +24,12 @@ Navegar até a pasta mvc:
 $ cd mvc
 ```
 
+Instalar as dependências:
+
+```bash
+$ composer install
+```
+
 Executar o servidor local:
 
 ```bash

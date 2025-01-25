@@ -1,7 +1,7 @@
 <?php
-
 require __DIR__ . '/../vendor/autoload.php';
 
+use App\Utils\Response;
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
@@ -17,8 +17,5 @@ $routes = [
 if (array_key_exists($uri, $routes)) {
     require_once $routes[$uri];
 } else {
-    http_response_code(404);
-    echo json_encode([
-        'message' => 'Page not found'
-    ]);
+    Response::json(['message' => 'Page not found'], 404);
 }

@@ -2,11 +2,12 @@
 header('Content-Type: application/json');
 
 use App\Controllers\ClientsController;
+use App\Utils\Response;
 
 $method = $_SERVER['REQUEST_METHOD'];
 $headers = getallheaders();
-$statusCode = 204;
-$response = '';
+$statusCode = 400;
+$response = ['message' => 'Bad request'];
 
 $clients = new ClientsController($_SERVER, $headers);
 
@@ -16,9 +17,12 @@ switch ($method) {
         $statusCode = 200;
         break;
     default:
-        http_response_code($statusCode);
-        die();
+        Response::json(['message' => 'Page not found'], 404);
 }
 
-http_response_code($statusCode);
-echo json_encode($response);
+if (in_array('status', $response)) {
+    $statusCode = $response['status'];
+    $response = $response['message'];
+}
+
+Response::json($response, $statusCode);

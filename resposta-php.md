@@ -56,7 +56,7 @@
 
 ## 3 - Aplique o conceito MVC para o trecho de código abaixo:
 
-- Resposta na pasta 'mvc'
+- Resposta na pasta 'mvc'. O arquivo README contém mais detalhes de como executar o código.
 
 ## 4 - Qual a sua abordagem para lidar com erros e exceções? Como você garante que os usuários finais recebam mensagens de erro claras e informativas?
 

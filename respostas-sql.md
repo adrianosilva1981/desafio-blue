@@ -1,10 +1,8 @@
 # Respostas Desafio Blue
 
-### Obs: algumas modificações foram aplicadas nos códigos de criação de tabelas, considerando que foi o desafio foi realizado usando-se MariaDB. Logo, o comando 'VISIBLE' foi descartado. Também tomei a liberdade de colocar um 'AUTO_INCREMENT' na criação da tabela de endereços.
+### Obs: algumas modificações foram aplicadas nos códigos de criação de tabelas, considerando que o desafio foi realizado usando-se MariaDB. Logo, o comando 'VISIBLE' foi descartado. Também tomei a liberdade de colocar um 'AUTO_INCREMENT' na criação da tabela de endereços.
 
-## 1 - A partir da tabela cliente, apresente query’s para atualizar com os dados da mesma as tabelas
-
-endereco e telefone.
+## 1 - A partir da tabela cliente, apresente query’s para atualizar com os dados da mesma as tabelas endereco e telefone.
 
 - Tabela enderecos
 
@@ -63,7 +61,7 @@ ALTER TABLE cliente
     DROP COLUMN fone_com;
 ```
 
-## 3 - Apresente um query com a seleção agrupada dos dados das três tabelas.
+## 3 - Apresente uma query com a seleção agrupada dos dados das três tabelas.
 
 ```sql
 SELECT

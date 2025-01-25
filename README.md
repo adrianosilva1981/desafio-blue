@@ -30,6 +30,19 @@ Instalar as dependências:
 $ composer install
 ```
 
+Criar o arquivo `.env` na pasta `/mvc` com o conteúdo:
+
+```bash
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=desafio_blue
+DB_USERNAME=app_user
+DB_PASSWORD=app_password
+
+APP_ENV=local
+APP_DEBUG=true
+```
+
 Executar o servidor local:
 
 ```bash

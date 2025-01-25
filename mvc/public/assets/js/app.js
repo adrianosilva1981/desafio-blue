@@ -1,16 +1,20 @@
-var app = angular.module('app', []);
+var app = angular.module('app', [])
 
 app.controller('clientController', function ($scope, $http) {
-    $scope.moduleName = 'clients';
+    $scope.loading = true
+    $scope.clientes = []
 
     $scope.getClients = () => {
         $http.get('clients').then(
             (response) => {
-                console.log(response);
+                const { data = [] } = response
+                $scope.clientes = data
+                $scope.loading = false
+                M.toast({ html: 'Listagem de clientes atualizada!', classes: 'success' })
             },
             (error) => {
-                console.log(error);
+                M.toast({ html: 'Algo de errado ocorreu.<br>Por favor, tente mais tarde.', classes: 'danger' })
             }
-        );
+        )
     }
 });

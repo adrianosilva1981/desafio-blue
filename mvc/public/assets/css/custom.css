@@ -1,0 +1,13 @@
+.progress {
+    position: absolute;
+    margin: 0rem 0 1rem 0;
+    top: 0;
+}
+
+.success {
+    background-color: #26a69a;
+}
+
+.danger {
+    background-color: #eb7077
+}
